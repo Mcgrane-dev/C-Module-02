@@ -6,7 +6,7 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 14:45:44 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/05/06 15:26:02 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:50:32 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
 	~Fixed();
 
 	int getRawBits(void);
+	void setRawBits(int const raw );
 
 };
 
