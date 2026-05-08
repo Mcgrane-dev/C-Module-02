@@ -6,13 +6,22 @@
 /*   By: jmcgrane <jmcgrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 14:45:40 by jmcgrane          #+#    #+#             */
-/*   Updated: 2026/05/07 13:26:42 by jmcgrane         ###   ########.fr       */
+/*   Updated: 2026/05/08 13:53:38 by jmcgrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(Fixed const &object)
+Fixed& Fixed::operator=(Fixed const &src) // Assignment operator overload
+{
+	if(this != &src)
+	{
+		this->value = src.value;
+	}
+	return *this;
+}
+
+Fixed::Fixed(Fixed const &object) // Copy constructor
 {
 	this->value = object.getRawBits();
 }
