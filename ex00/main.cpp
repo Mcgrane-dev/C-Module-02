@@ -15,9 +15,14 @@
 int main(void)
 {
 	Fixed a;
-	Fixed b(a);
+	// a.setRawBits(4);
+	Fixed b(a); // calls copy constructor
 	Fixed c;
 
-	c = a;
+	c = b; // calls assignment operator
+
+	std::cout << a.getRawBits() << "\n";
+	std::cout << b.getRawBits() << "\n";
+	std::cout << c.getRawBits() << "\n";
 	return 0;
 }

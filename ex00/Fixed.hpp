@@ -13,6 +13,9 @@
 #ifndef FIXED_H
 #define FIXED_H
 
+#include <iostream>
+#include <string>
+
 class Fixed {
 private:
 	int value;
@@ -25,8 +28,8 @@ public:
 	Fixed(Fixed const &src); // Copy constructor
 	Fixed& operator=(Fixed const &src); // Assignment operator overload
 
-	int getRawBits(void) const;
 	void setRawBits(int const raw);
+	int getRawBits(void) const;
 };
 
 #endif
