@@ -10,6 +10,16 @@ int Fixed::toInt(void) const
 	return(int)this->value / 256;
 }
 
+Fixed& Fixed::operator=(const Fixed &obj)
+{
+	std::cout << "Assignment operator called\n";
+	if(this != &obj)
+	{
+		this->value = obj.value;
+	}
+	return *this;
+}
+
 Fixed::Fixed(Fixed const &obj)
 {
 	std::cout << "Copy constructor called\n";
@@ -26,6 +36,12 @@ Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called\n";
 	this->value = value * 256;
+}
+
+Fixed::Fixed()
+{
+    std::cout << "Default constructor called\n";
+	this->value = 0;
 }
 
 Fixed::~Fixed()
