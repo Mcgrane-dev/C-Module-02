@@ -17,9 +17,11 @@ public:
 	Fixed();
 	Fixed(const int value);
 	Fixed(const float value);
-	Fixed(Fixed const &obj);
+	Fixed(const Fixed &obj);
 	Fixed& operator=(const Fixed &obj);
 	~Fixed();
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed & fixed);
 
 #endif
