@@ -20,7 +20,7 @@ int main(void)
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return 0;
 }
-// TO DO
+
 // So std::cout << "a =" calls builtin fucntion where, std::cout is ostream parameter
 // and "a " is char*str parameter...
  

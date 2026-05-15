@@ -22,6 +22,6 @@ public:
 	~Fixed();
 };
 
-std::ostream& operator<<(std::ostream& os, const Fixed & fixed);
+std::ostream& operator<<(std::ostream& os, const Fixed & fixed); // Stream insertion operator
 
 #endif

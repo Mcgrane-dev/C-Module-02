@@ -6,16 +6,6 @@ std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 	return os;
 }
 
-float Fixed::toFloat(void) const
-{
-	return(float)this->value / 256;
-}
-
-int Fixed::toInt(void) const
-{
-	return(int)this->value / 256;
-}
-
 Fixed& Fixed::operator=(const Fixed &obj)
 {
 	std::cout << "Assignment operator called\n";
@@ -24,6 +14,16 @@ Fixed& Fixed::operator=(const Fixed &obj)
 		this->value = obj.value;
 	}
 	return *this;
+}
+
+float Fixed::toFloat(void) const
+{
+	return(float)this->value / 256;
+}
+
+int Fixed::toInt(void) const
+{
+	return(int)this->value / 256;
 }
 
 Fixed::Fixed(const Fixed &obj)
