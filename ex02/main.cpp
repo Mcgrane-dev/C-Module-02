@@ -2,11 +2,16 @@
 
 int main(void)
 {
-	Fixed a(5);
-	Fixed b(2);
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	if(a > b)
-		std::cout << "a is greater than b\n";
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+
+	std::cout << b << std::endl;
 
 	return 0;
 }
